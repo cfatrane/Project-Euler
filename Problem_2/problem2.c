@@ -6,7 +6,7 @@
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
 /*   Created: 2017/01/26 15:15:29 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/26 15:33:49 by cfatrane         ###   ########.fr       */
+/*   Updated: 2017/01/26 15:36:13 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -26,13 +26,11 @@ int	main(void)
 	sum = 0;
 	while (b < max)
 	{
-		printf("b = %d et sum = %d\n", b, sum);
 		if (b % 2 == 0)
 			sum = sum + b;
 		c = a + b;
 		a = b;
 		b = c;
 	}
-	printf("%d", sum);
 	return (sum);
 }
