@@ -1,32 +1,38 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   problem1.c                                         :+:      :+:    :+:   */
+/*   problem2.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/26 15:16:39 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/26 15:16:39 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/26 15:15:29 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/26 15:33:49 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
 #include <stdio.h>
 
-int main(void)
+int	main(void)
 {
-	int mult;
-	int res;
+	int a;
+	int b;
+	int c;
+	int	max;
+	int	sum;
 
-	mult = 0;
-	res = 0;
-	while (mult < 1000)
+	a = 1;
+	b = 1;
+	max = 4000000;
+	sum = 0;
+	while (b < max)
 	{
-		if (mult % 3 == 0 || mult % 5 == 0)
-		{
-			res += mult;
-		}
-		mult++;
+		printf("b = %d et sum = %d\n", b, sum);
+		if (b % 2 == 0)
+			sum = sum + b;
+		c = a + b;
+		a = b;
+		b = c;
 	}
-	printf("%d\n", res);
-	return (0);
+	printf("%d", sum);
+	return (sum);
 }
