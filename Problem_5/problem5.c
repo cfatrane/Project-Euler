@@ -1,12 +1,12 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   problem3.c                                         :+:      :+:    :+:   */
+/*   problem5.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/26 15:37:46 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/01/26 16:16:05 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/01/26 15:46:37 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/01/26 16:22:45 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
@@ -14,28 +14,27 @@
 
 int	main(void)
 {
-	int			i;
-	long int	num;
+	int	k;
+	int	N;
+	int	i;
 
-	num = 20;
-	while (69)
+	k = 20;
+	N = 1;
+	i = 1;
+	check = true;
+	limit = sqrt(k);
+	while p[i] <= k
 	{
-		i = 2;
-		while (i <= num)
-		{
-			if (num % i == 0)
-			{
-				printf("%d", i);
-				num /= i;
-				break ;
-			}
-			i++;
-		}
-		if (num == 1)
-			break ;
-		else
-			printf("*");
+		a[i] = 1
+			if check then
+				if p[i] <= limit then
+					a[i] = floor( log(k) / log(p[i]) )
+				else
+					check = false
+						end if
+						end if
+						N = N * p[i] ^ a[i]
+						i = i + 1
 	}
-	printf("\n");
-	return (0);
+	output N 
 }
