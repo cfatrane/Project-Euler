@@ -1,32 +1,52 @@
 /* ************************************************************************** */
 /*                                                                            */
 /*                                                        :::      ::::::::   */
-/*   problem1.c                                         :+:      :+:    :+:   */
+/*   problem4.c                                         :+:      :+:    :+:   */
 /*                                                    +:+ +:+         +:+     */
 /*   By: cfatrane <cfatrane@student.42.fr>          +#+  +:+       +#+        */
 /*                                                +#+#+#+#+#+   +#+           */
-/*   Created: 2017/01/26 15:16:39 by cfatrane          #+#    #+#             */
-/*   Updated: 2017/06/20 14:42:46 by cfatrane         ###   ########.fr       */
+/*   Created: 2017/06/20 14:41:08 by cfatrane          #+#    #+#             */
+/*   Updated: 2017/06/21 13:43:53 by cfatrane         ###   ########.fr       */
 /*                                                                            */
 /* ************************************************************************** */
 
+#include <string.h>
 #include <stdio.h>
 
-int	main(void)
+int	is_pal(char *str)
 {
-	int mult;
-	int res;
+	int	i;
+	int	j;
 
-	mult = 0;
-	res = 0;
-	while (mult < 1000)
+	i = 0;
+	j = strlen(str) - 1;
+	while (i != strlen(str) / 2)
 	{
-		if (mult % 3 == 0 || mult % 5 == 0)
+		printf("I = %c || J = %c\n", str[i], str[j]);
+		if (str[i] != str[j])
 		{
-			res += mult;
+			printf("WRONG\n");
+			return (0);
 		}
-		mult++;
+		i++;
+		j--;
 	}
-	printf("%d\n", res);
+	printf("IS PAL\n");
+	return (0);
+}
+
+int	main(int argc, char **argv)
+{
+	int	one;
+	int	two;
+	int	three;
+
+	one = 999;
+	two = 999;
+	three = 999;
+	while (is_pal())
+	{
+	}
+	is_pal(argv[1]);
 	return (0);
 }
